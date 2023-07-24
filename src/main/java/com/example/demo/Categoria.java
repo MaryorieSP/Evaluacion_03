@@ -21,8 +21,30 @@ public class Categoria {
 
     @OneToMany(targetEntity = Instrumento.class, mappedBy = "categoria")
     @OrderBy("nombre ASC")
-    private Set<Instrumento> cursos = new HashSet<Instrumento>();
+    private Set<Instrumento> instrumentos = new HashSet<Instrumento>();
 
-    
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Set<Instrumento> getInstrumentos() {
+        return instrumentos;
+    }
+
+    public void setInstrumentos(Set<Instrumento> instrumentos) {
+        this.instrumentos = instrumentos;
+    }
 
 }
