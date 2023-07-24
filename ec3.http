@@ -23,7 +23,7 @@
 # Deben desplegar su aplicación en render
 # Al finalizar el examen entregarlo en el siguiente link: https://forms.office.com/r/fdytLW5PHe
 
-@server = https://maryoriesp-supreme-disco-ggwwwx5pgwwcwrw-8080.preview.app.github.dev
+@server = https://evaluacion-continua-03.onrender.com
 @api = {{server}}/api/ec3
 
 ################ Categorias: ################
