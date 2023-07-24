@@ -19,30 +19,34 @@ public class Instrumento{
 
     private String nombre;
     
-    @ManyToOne (cascade = CascadaType.ALL)
+    @ManyToOne (cascade = CascadeType.ALL)
     @JoinColumn(name="id_categoria")
     private Categoria categoria;
 
+	public Integer getId() {
+		return id;
+	}
 
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public Categoria getCategoria() {
-        return categoria;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+    
 
 }
