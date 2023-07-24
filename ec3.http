@@ -1,0 +1,48 @@
+###########################################
+########## EVALUACIÓN CONTÍNUA 3 ##########
+###########################################
+
+# Evaluación:
+
+# - Crear un nuevo proyecto Java desde https://start.spring.io/
+# - Crear un repositorio github PÚBLICO para su nuevo proyecto de java. (se considerará nota mínima si no se logra accer al repositorio)
+# - Copiar en la raiz de su repositorio este archivo ec3.http
+# - El proyecto de java debe satisfacer los requests del archivo ec3.http copiado
+# - Se deben de crear 2 Entidades y sus respectivos Respository
+#   - Categoria:
+#     - id
+#     - nombre
+#   - Instrumento:
+#     - id
+#     - nombre
+#     - id_categoria
+#
+# Relación: Un Instrumento tiene una Categoría,
+#           pero una categoría puede tener muchos Instrumentos
+# TODOS los web services deben estar en la siguiente ruta: /api/ec3
+# Deben desplegar su aplicación en render
+# Al finalizar el examen entregarlo en el siguiente link: https://forms.office.com/r/fdytLW5PHe
+
+@server = INSERTAR URL DE RENDER ACÁ
+@api = {{server}}/api/ec3
+
+################ Categorias: ################
+###
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Cuerda"}
+################ Instrumentos: ################
+###
+GET {{api}}/instrumentos
+###
+POST {{api}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
+###
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
